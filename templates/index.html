@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+</head>
+<style>
+.container{
+    /* display:flex; */
+    /* align-items:center; */
+    justify-content:center;
+    height:1000px;
+    width:1000px;
+}
+
+.header{
+    text-align:center;
+}
+
+.main{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    height:1000px;
+    width:1000px;
+    flex-wrap:wrap;
+}
+.square{
+    height:200px;
+    width:200px;
+    background-color: var(--color);
+    outline: solid black 2px;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Squares</h1>
+        </div>
+        <div class="main">
+            {% for i in range(0,num) %}
+                <div class="square" style="--color: {{ color }}"></div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>
